@@ -1,0 +1,34 @@
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/oj-2.15.0/ext/oj
+/home/zapotek/arachni-build-dir/arachni/system/usr/bin/ruby -r ./siteconf20170329-11702-xtyokl.rb extconf.rb
+>>>>> Creating Makefile for ruby version 2.2.3 on x86_64-linux <<<<<
+creating Makefile
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/oj-2.15.0/ext/oj
+make "DESTDIR=" clean
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/oj-2.15.0/ext/oj
+make "DESTDIR="
+compiling hash.c
+compiling resolve.c
+compiling reader.c
+compiling odd.c
+compiling sparse.c
+compiling err.c
+compiling strict.c
+compiling cache8.c
+compiling saj.c
+compiling compat.c
+compiling parse.c
+compiling dump.c
+compiling circarray.c
+compiling object.c
+compiling val_stack.c
+compiling fast.c
+compiling scp.c
+compiling hash_test.c
+compiling oj.c
+linking shared-object oj/oj.so
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/oj-2.15.0/ext/oj
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 oj.so ./.gem.20170329-11702-9m2oz8/oj

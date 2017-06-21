@@ -1,0 +1,184 @@
+
+{
+    "arachni-simple_xss-1.3.2" : { "command" : "arachni --check=xss <url>",
+      "description" : "This is a scan for cross site scripting (xss) that only runs the base xss module in arachni. This particular scan is for version 1.3.2 of arachni.",
+      "requires" : [ "<url>" ]
+    },
+    "arachni-simple_xss-1.0.6" : { "command" : "arachni --modules=xss <url>",
+      "description" : "This is a scan for cross site scripting (xss) that only runs the base xss module in arachni. This particular scan is for version 1.3.2 of arachni.",
+      "requires" : [ "<url>" ]
+    },
+   "arachni-simple_xss" : { "command" : "arachni --checks=xss --scope-directory-depth-limit=1 --scope-page-limit=10 --scope-auto-redundant=2 <url>",
+      "description" : "This is a scan for cross site scripting (xss) that only runs the base xss module in arachni.  The scan only crawls one level deep which makes it faster.  For more depth, run the gauntlt attack alias 'arachni-simple_xss_with_dep$
+      "requires" : [ "<url>" ]
+    },
+  "arachni-simple_xss_with_depth" : { "command" : "arachni --checks=xss --scope-directory-depth-limit=<depth> <url>",
+      "description" : "This is a scan for cross site scripting (xss) that only runs the base xss module in arachni.  The scan only crawls as many levels deep as you specify.  The higher the integer, the longer the scan will take to run.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+  "arachni-full_xss" : { "command" : "arachni --checks=xss* --scope-directory-depth-limit=1 --scope-page-limit=10 --scope-auto-redundant=2 <url>",
+      "description" : "This is a scan for cross site scripting (xss) that only runs all the xss modules in arachni.  The scan only crawls one level deep, which makes it faster.  For more depth, run the gauntlt attack alias 'arachni-full_xss_with_dept$
+      "requires" : [ "<url>" ]
+    },
+  "arachni-full_xss_with_depth" : { "command" : "arachni --checks=xss* --scope-directory-depth-limit=<depth> <url>",
+      "description" : "This is a scan for cross site scripting (xss) that only runs all the xss modules in arachni.  The scan only crawls as many levels deep as you specify.  The higher the integer, the longer the scan will take to run.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+  "arachni-xss_with_options" : { "command" : "arachni --checks=xss* --scope-directory-depth-limit=<depth> --scope-page-limit=<link_count> --scope-auto-redundant=<auto_redundant> <url>",
+      "description" : "This is a scan for cross site scripting (xss) that runs all the xss modules in arachni.  This requires to specify several options for the scan. The arachni wiki has information on what these options represent but generally as y$
+      "requires" : [ "<url>", "<depth>", "<link_count>", "<auto_redundant>" ]
+    },
+
+ "arachni-common_directories" : { "command" : "arachni --checks=common_directories <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to find common directories on the server.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+ "arachni-insecure_cross_domain_policy_headers" : { "command" : "arachni --checks=insecure_cross_domain_policy_headers <url> --scope-directory-depth-limit 1",
+      "description" : "Checks `crossdomain.xml` files for wildcard `allow-http-request-headers-from` policies",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+   "arachni-common_admin_interfaces : { "command" : "arachni --checks=common_admin_interfaces <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to find common admin interfaces on the server.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-backup_directories" : { "command" : "arachni --checks=backup_directories <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to find backed-up directories.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-backup_files" : { "command" : "arachni --checks=backup_files <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to find backed-up directories.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-insecure_cross_domain_policy_access" : { "command" : "arachni --checks=insecure_cross_domain_policy_access <url> --scope-directory-depth-limit 1",
+      "description" : "Checks `crossdomain.xml` files for `allow-access-from` wildcard policies.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-cbackdoors" : { "command" : "arachni --checks=backdoors <url> --scope-directory-depth-limit 1",
+      "description" : "TTries to find common backdoors on the server.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-http_only_cookies" : { "command" : "arachni --checks=http_only_cookies <url> --scope-directory-depth-limit 1",
+      "description" : "",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+    "arachni-x-frame_options" : { "command" : "arachni --checks=x-frame_options <url> --scope-directory-depth-limit 1",
+      "description" : "Checks the host for a missing `X-Frame-Options` header.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+   "arachni-Insecure_cookies" : { "command" : "arachni --checks=Insecure_cookies <url> --scope-directory-depth-limit 1",
+      "description" : "Logs cookies that are served over an encrypted channel but without having the `secure` flag set.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-unencrypted_password_forms" : { "command" : "arachni --checks=unencrypted_password_forms <url> --scope-directory-depth-limit 1",
+      "description" : "Looks for password inputs that don't submit data over an encrypted channel (HTTPS).",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-hsts" : { "command" : "arachni --checks=hsts <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to force directory listings.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-private_ip" : { "command" : "arachni --checks=private_ip <url> --scope-directory-depth-limit 1",
+      "description" : "Scans pages for private IP addresses.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+
+     "arachni-password_autocomplete" : { "command" : "arachni --checks=password_autocomplete <url> --scope-directory-depth-limit 1",
+      "description" : "Greps pages for forms which have password fields without explicitly disabling auto-complete.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+     "arachni-htaccess_limit" : { "command" : "arachni --checks=htaccess_limit <url> --scope-directory-depth-limit 1",
+      "description" : "Checks for misconfiguration in LIMIT directives that blocks",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+     "arachni-origin_spoof_access_restriction_bypass" : { "command" : "arachni --checks=origin_spoof_access_restriction_bypass <url> --scope-directory-depth-limit 1",
+      "description" : "Retries denied requests with a spoofed origin header to trick the web application into thinking that the request originated from localhost and checks whether the restrictions was bypassed.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-common_directories" : { "command" : "arachni --checks=common_directories <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to find common directories on the server.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+         "arachni-interesting_responses" : { "command" : "arachni --checks=interesting_responses <url> --scope-directory-depth-limit 1",
+      "description" : "Logs all non 200 (OK) server responses.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-os_cmd_injection_timing" : { "command" : "arachni --checks=os_cmd_injection_timing <url> --scope-directory-depth-limit 1",
+      "description" : "Tries to find operating system command injections using timing attacks.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+         "arachni-sql_injection" : { "command" : "arachni --checks=sql_injection <url> --scope-directory-depth-limit 1",
+      "description" : "SQL injection check, uses known SQL DB errors to identify vulnerabilities.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-sql_injection_differential" : { "command" : "arachni --checks=sql_injection_differential <url> --scope-directory-depth-limit 1",
+      "description" : "It uses differential analysis to determine how different inputs affect behavior of the web application and checks if the displayed behavior is consistent with that of a vulnerable application.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+         "arachni-ldap_injection" : { "command" : "arachni --checks=ldap_injection <url> --scope-directory-depth-limit 1",
+      "description" : "It tries to force the web application to return LDAP error messages, in order to discover failures in user input validation.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-hxss_dom_script_context : { "command" : "arachni --checks=xss_dom_script_context <url> --scope-directory-depth-limit 1",
+      "description" : "Injects JS taint code and checks to see if it gets executed as proof of vulnerability.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-no_sql_injection" : { "command" : "arachni --checks=no_sql_injection <url> --scope-directory-depth-limit 1",
+      "description" : "NoSQL injection check, uses known DB errors to identify vulnerabilities.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+
+         "arachni-path_traversal" : { "command" : "arachni --checks=path_traversal <url> --scope-directory-depth-limit 1",
+      "description" : "It injects paths of common files ( like `/etc/passwd` and `boot.ini`) and evaluates the existence of a path traversal vulnerability based on the presence of relevant content in the HTML responses.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-code_injection" : { "command" : "arachni --checks=code_injection <url> --scope-directory-depth-limit 1",
+      "description" : "Injects code snippets and assess whether or not execution was successful.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-rfi" : { "command" : "arachni --checks=rfi <url> --scope-directory-depth-limit 1",
+      "description" : "Injects a remote URL in all available inputs and checks for relevant content in the HTTP response body.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-csrf" : { "command" : "arachni --checks=csrf <url> --scope-directory-depth-limit 1",
+      "description" : "It uses differential analysis to determine which forms affect business logic and checks them for lack of anti-CSRF tokens.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         "arachni-file_inclusion" : { "command" : "arachni --checks=file_inclusion <url> --scope-directory-depth-limit 1",
+      "description" : "Injects paths of common files (like `/etc/passwd` and `boot.ini`) and evaluates the existence of a file inclusion vulnerability based on the presence of relevant content or errors in the HTTP response body.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+             "arachni-unvalidated_redirect" : { "command" : "arachni --checks=unvalidated_redirect <url> --scope-directory-depth-limit 1",
+      "description" : "Injects URLs and checks the browser URL to determine whether the attack was successful.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+         
+}

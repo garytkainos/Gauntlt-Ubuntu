@@ -1,0 +1,30 @@
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/ox-2.4.11/ext/ox
+/home/zapotek/arachni-build-dir/arachni/system/usr/bin/ruby -r ./siteconf20170329-11702-1abqoic.rb extconf.rb
+>>>>> Creating Makefile for ruby version 2.2.3 on x86_64-linux <<<<<
+creating Makefile
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/ox-2.4.11/ext/ox
+make "DESTDIR=" clean
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/ox-2.4.11/ext/ox
+make "DESTDIR="
+compiling sax_hint.c
+compiling sax.c
+compiling obj_load.c
+compiling base64.c
+compiling cache.c
+compiling ox.c
+compiling builder.c
+compiling special.c
+compiling err.c
+compiling cache8.c
+compiling parse.c
+compiling dump.c
+compiling sax_as.c
+compiling sax_buf.c
+compiling gen_load.c
+linking shared-object ox.so
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/ox-2.4.11/ext/ox
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ox.so ./.gem.20170329-11702-5shyd6

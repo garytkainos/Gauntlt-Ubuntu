@@ -1,0 +1,9 @@
+Name: libpq
+Description: PostgreSQL libpq library
+Url: http://www.postgresql.org/
+Version: 9.4.5
+Requires: 
+Requires.private: 
+Cflags: -I/home/zapotek/arachni-build-dir/arachni/system/usr/include
+Libs: -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lpq
+Libs.private: -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lcrypt -lpthread

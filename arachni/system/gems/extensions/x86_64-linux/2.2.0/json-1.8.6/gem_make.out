@@ -1,0 +1,13 @@
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/json-1.8.6/ext/json
+/home/zapotek/arachni-build-dir/arachni/system/usr/bin/ruby -r ./siteconf20170329-11702-1x7rc9v.rb extconf.rb
+creating Makefile
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/json-1.8.6/ext/json
+make "DESTDIR=" clean
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/json-1.8.6/ext/json
+make "DESTDIR="
+make: Nothing to be done for `all'.
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/json-1.8.6/ext/json
+make "DESTDIR=" install

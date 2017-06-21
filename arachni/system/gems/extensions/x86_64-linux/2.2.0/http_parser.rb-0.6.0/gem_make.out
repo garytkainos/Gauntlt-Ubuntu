@@ -1,0 +1,31 @@
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+/home/zapotek/arachni-build-dir/arachni/system/usr/bin/ruby -r ./siteconf20170329-11702-ivew70.rb extconf.rb
+creating Makefile
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" clean
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR="
+compiling ryah_http_parser.c
+compiling ruby_http_parser.c
+ruby_http_parser.c: In function ‘on_message_begin’:
+ruby_http_parser.c:108: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c: In function ‘on_header_value’:
+ruby_http_parser.c:146: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c: In function ‘on_headers_complete’:
+ruby_http_parser.c:192: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c: In function ‘on_body’:
+ruby_http_parser.c:213: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c: In function ‘on_message_complete’:
+ruby_http_parser.c:232: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c: In function ‘Parser_execute’:
+ruby_http_parser.c:314: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c:320: warning: ISO C90 forbids mixed declarations and code
+ruby_http_parser.c: In function ‘Parser_set_header_value_type’:
+ruby_http_parser.c:451: warning: ISO C90 forbids mixed declarations and code
+linking shared-object ruby_http_parser.so
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20170329-11702-1m9k0mi

@@ -1,0 +1,527 @@
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I.  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib      -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I.  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC    -Werror -c conftest.c"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main() {return 0;}
+/* end */
+
+have_library: checking for gzdopen() in -lz... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I.  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib      -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby -lz  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <zlib.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))gzdopen; return 0; }
+/* end */
+
+--------------------
+
+have_iconv?: checking for iconv using --with-opt-* flags... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I.  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib      -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <stdlib.h>
+ 4: #include <iconv.h>
+ 5: 
+ 6: int main(void)
+ 7: {
+ 8:     iconv_t cd = iconv_open("", "");
+ 9:     iconv(cd, NULL, NULL, NULL, NULL);
+10:     return EXIT_SUCCESS;
+11: }
+/* end */
+
+--------------------
+
+have_library: checking for main() in -llzma... -------------------- no
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I.  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib      -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby -llzma  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+/usr/bin/ld: cannot find -llzma
+collect2: ld returned 1 exit status
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))main; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I.  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include    -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib      -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby -llzma  -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: too few arguments to function ‘main’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { main(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlParseDoc() in libxml/parser.h... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxml/parser.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlParseDoc; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xsltParseStylesheetDoc() in libxslt/xslt.h... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:15: error: ‘xsltParseStylesheetDoc’ undeclared (first use in this function)
+conftest.c:15: error: (Each undeclared identifier is reported only once
+conftest.c:15: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxslt/xslt.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))xsltParseStylesheetDoc; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:15: warning: implicit declaration of function ‘xsltParseStylesheetDoc’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libxslt/xslt.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { xsltParseStylesheetDoc(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for exsltFuncRegister() in libexslt/exslt.h... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: #include <libexslt/exslt.h>
+ 4: 
+ 5: /*top*/
+ 6: extern int t(void);
+ 7: int main(int argc, char **argv)
+ 8: {
+ 9:   if (argc > 1000000) {
+10:     printf("%p", &t);
+11:   }
+12: 
+13:   return 0;
+14: }
+15: int t(void) { void ((*volatile p)()); p = (void ((*)()))exsltFuncRegister; return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlHasFeature()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlHasFeature’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlHasFeature; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlHasFeature’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlHasFeature(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlFirstElementChild()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlFirstElementChild’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlFirstElementChild; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlFirstElementChild’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlFirstElementChild(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlRelaxNGSetParserStructuredErrors’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetParserStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlRelaxNGSetParserStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlRelaxNGSetParserStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlRelaxNGSetParserStructuredErrors’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetParserStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlRelaxNGSetParserStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlRelaxNGSetParserStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlRelaxNGSetValidStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlRelaxNGSetValidStructuredErrors’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlRelaxNGSetValidStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlRelaxNGSetValidStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlRelaxNGSetValidStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlSchemaSetValidStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlSchemaSetValidStructuredErrors’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlSchemaSetValidStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlSchemaSetValidStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlSchemaSetValidStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+
+have_func: checking for xmlSchemaSetParserStructuredErrors()... -------------------- yes
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: error: ‘xmlSchemaSetParserStructuredErrors’ undeclared (first use in this function)
+conftest.c:13: error: (Each undeclared identifier is reported only once
+conftest.c:13: error: for each function it appears in.)
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { void ((*volatile p)()); p = (void ((*)()))xmlSchemaSetParserStructuredErrors; return 0; }
+/* end */
+
+"gcc -o conftest -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/x86_64-linux -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0/ruby/backward -I/home/zapotek/arachni-build-dir/arachni/system/usr/include/ruby-2.2.0 -I. -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/include -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2 -I/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/include/libxml2  -I/home/zapotek/arachni-build-dir/arachni/system/usr/include   "-DNOKOGIRI_LIBXML2_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4\"" "-DNOKOGIRI_LIBXML2_PATCHES=\"\"" "-DNOKOGIRI_LIBXSLT_PATH=\"/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29\"" "-DNOKOGIRI_LIBXSLT_PATCHES=\"\""  -O3 -fno-fast-math -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wunused-variable -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wno-packed-bitfield-compat  -fPIC  -g -DXP_UNIX -O3 -Wall -Wcast-qual -Wwrite-strings -Wconversion -Wmissing-noreturn -Winline -DNOKOGIRI_USE_PACKAGED_LIBRARIES conftest.c  -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib -L/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L. -fstack-protector -rdynamic -Wl,-export-dynamic -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib  -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib     /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -Wl,-R/home/zapotek/arachni-build-dir/arachni/system/usr/lib -L/home/zapotek/arachni-build-dir/arachni/system/usr/lib -lruby /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libexslt.a -lrt -lm -ldl -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxslt/1.1.29/lib/libxslt.a -ldl -lm -lz /home/zapotek/arachni-build-dir/arachni/system/gems/gems/nokogiri-1.6.8.1/ports/x86_64-pc-linux-gnu/libxml2/2.9.4/lib/libxml2.a -lpthread -lrt -ldl -lcrypt -lm   -lc "
+conftest.c: In function ‘t’:
+conftest.c:13: warning: implicit declaration of function ‘xmlSchemaSetParserStructuredErrors’
+checked program was:
+/* begin */
+ 1: #include "ruby.h"
+ 2: 
+ 3: /*top*/
+ 4: extern int t(void);
+ 5: int main(int argc, char **argv)
+ 6: {
+ 7:   if (argc > 1000000) {
+ 8:     printf("%p", &t);
+ 9:   }
+10: 
+11:   return 0;
+12: }
+13: int t(void) { xmlSchemaSetParserStructuredErrors(); return 0; }
+/* end */
+
+--------------------
+

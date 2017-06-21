@@ -1,0 +1,14 @@
+# $Id$
+prefix=/home/zapotek/arachni-build-dir/arachni/system/usr
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: heimdal
+Description: Heimdal is an implementation of Kerberos 5, freely available under a three clause BSD style license.
+Version: 1.5.3
+URL: http://www.pdc.kth.se/heimdal/
+#Requires: foo = 1.3.1
+#Conflicts: bar <= 4.5
+Libs: -L${libdir} -lgssapi -lheimntlm -lkrb5 -lhx509 -lcom_err -lhcrypto -lasn1 -lwind -lroken -lcrypt -ldl  -lresolv -pthread 
+Cflags: -I${includedir}

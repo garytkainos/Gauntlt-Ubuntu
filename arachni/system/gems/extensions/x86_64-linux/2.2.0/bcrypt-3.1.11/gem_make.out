@@ -1,0 +1,19 @@
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/bcrypt-3.1.11/ext/mri
+/home/zapotek/arachni-build-dir/arachni/system/usr/bin/ruby -r ./siteconf20170329-11702-1asgt6e.rb extconf.rb
+creating Makefile
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" clean
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR="
+compiling wrapper.c
+compiling bcrypt_ext.c
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling crypt.c
+linking shared-object bcrypt_ext.so
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/bcrypt-3.1.11/ext/mri
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20170329-11702-p45dqt

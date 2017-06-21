@@ -1,0 +1,14 @@
+prefix="/home/zapotek/arachni-build-dir/arachni/system/usr"
+exec_prefix="/home/zapotek/arachni-build-dir/arachni/system/usr"
+libdir="/home/zapotek/arachni-build-dir/arachni/system/usr/lib"
+includedir="/home/zapotek/arachni-build-dir/arachni/system/usr/include/freetype2"
+
+Name: FreeType 2
+URL: http://freetype.org
+Description: A free, high-quality, and portable font engine.
+Version: 17.2.11
+Requires:
+Requires.private: 
+Libs: -L${libdir} -lfreetype
+Libs.private: 
+Cflags: -I${includedir}

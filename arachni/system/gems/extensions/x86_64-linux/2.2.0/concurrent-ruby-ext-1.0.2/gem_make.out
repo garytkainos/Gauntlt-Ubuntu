@@ -1,0 +1,23 @@
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/concurrent-ruby-ext-1.0.2/ext/concurrent
+/home/zapotek/arachni-build-dir/arachni/system/usr/bin/ruby -r ./siteconf20170329-11702-1vax55.rb extconf.rb
+checking for libkern/OSAtomic.h... no
+creating Makefile
+
+To see why this extension failed to compile, please check the mkmf.log which can be found here:
+
+  /home/zapotek/arachni-build-dir/arachni/system/gems/extensions/x86_64-linux/2.2.0/concurrent-ruby-ext-1.0.2/mkmf.log
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/concurrent-ruby-ext-1.0.2/ext/concurrent
+make "DESTDIR=" clean
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/concurrent-ruby-ext-1.0.2/ext/concurrent
+make "DESTDIR="
+compiling atomic_reference.c
+compiling atomic_boolean.c
+compiling atomic_fixnum.c
+compiling rb_concurrent.c
+linking shared-object concurrent/extension.so
+
+current directory: /home/zapotek/arachni-build-dir/arachni/system/gems/gems/concurrent-ruby-ext-1.0.2/ext/concurrent
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 extension.so ./.gem.20170329-11702-2ffasl/concurrent
