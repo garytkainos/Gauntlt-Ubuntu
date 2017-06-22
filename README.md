@@ -7,3 +7,9 @@ Configured for the following tools:
 	- Garmr
 	- SSLyze
 	- Arachni (with Phantomjs2.1.1)
+
+Requires Attack Files
+
+Roadmap
+
+	- Arachni attack expansion 
