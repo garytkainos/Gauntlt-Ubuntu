@@ -1,6 +1,6 @@
 Gauntlt Docker, based on: Ubuntu15:10
 
-Raw data of Docker container to allow easy customisation for each unique environment. Solution in Docker container to make it easier to integrated into the CI/CD pipeline.
+Raw data of Docker container to allow easy customisation for each unique environment. Solution in Docker container to make it easier to integrated into the CI/CD pipeline
 
 Configured for the following tools:
 
@@ -20,7 +20,7 @@ Roadmap
 
 Installation 
 
-Required Dockers
+Required Docker to be installed.
 
-1.		git clone https://github.com/garytkainos/Gauntlt-Ubuntu 
-2.		Docker run <Image ID>
+		git clone https://github.com/garytkainos/Gauntlt-Ubuntu 
+		Docker run <Image ID>
