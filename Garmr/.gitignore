@@ -1,0 +1,13 @@
+*.swp
+dist/
+*.egg-info/
+*.pyc
+garmr-results.xml
+build/
+*.xml
+*.txt
+.project
+
+.pydevproject
+
+targets.txt
