@@ -6,7 +6,7 @@ Feature: simple nmap attack (sanity check)
     Given "nmap" is installed
     And the following profile:
       | name     | value      |
-      | hostname | www.kainos.com |
+      | hostname | www.<>.com |
 
   Scenario: Verify server is available on standard web ports
     When I launch an "nmap" attack with:
