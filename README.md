@@ -13,3 +13,4 @@ Requires Attack Files
 Roadmap
 
 	- Arachni attack expansion 
+	- Custom attacks
