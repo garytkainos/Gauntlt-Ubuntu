@@ -4,11 +4,11 @@ Raw data of Docker container to allow easy customisation for each unique environ
 
 Configured for the following tools:
 
-	- NMAP
-	- SQLMAP
-	- Garmr
-	- SSLyze
-	- Arachni (with Phantomjs2.1.1)
+- NMAP
+- SQLMAP
+- Garmr
+- SSLyze
+- Arachni (with Phantomjs2.1.1)
 
 Custom Arachni attacks have been added these include the following:
 
@@ -24,8 +24,8 @@ See example attack files - https://github.com/gauntlt/gauntlt/tree/master/exampl
 
 Roadmap
 
-	- Arachni attack expansion 
-	- Custom attacks
+- Arachni attack expansion 
+- Custom attacks
 
 
 Installation 
