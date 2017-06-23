@@ -26,6 +26,6 @@ gem install -include-dependancies gauntlt --no-ri
 CMD export SSLYZE_PATH=/usr/local/bin/sslyze && \
 	export arachni_path=/usr/local/bin/arachni && \
 	export garmr_path=/usr/local/bin/garmr && \
-	export PATH=$PATH=/gauntlt/arachni/bin && \
+	export PATH=$PATH:/gauntlt/arachni/bin && \
 	gauntlt
 	
