@@ -1,0 +1,49 @@
+@reallyslow
+Feature: Look for forms with file upload functionality 
+
+Scenario: Using the arachni, look for for forms with file upload functionality and verify no issues are found
+  Given "arachni" is installed
+  And the following profile:
+     | name                | value                          |
+     | url                 | https://www.<>.com        	|
+     | depth               | 1   							|
+  When I launch an "arachni-form-upload" attack
+Then the output should contain "0 issues were detected."
+
+Scenario: Using the arachni, look for for forms with file upload functionality and verify no issues are found
+  Given "arachni" is installed
+  And the following profile:
+     | name                | value                          |
+     | url                 | https://www.<>.com        	|
+     | depth               | 1   							|
+  When I launch an "arachni-mixed-resource" attack
+Then the output should contain "0 issues were detected."
+
+Scenario: Using the arachni, look for for forms with file upload functionality and verify no issues are found
+  Given "arachni" is installed
+  And the following profile:
+     | name                | value                          |
+     | url                 | https://www.<>.com        	|
+     | depth               | 1   							|
+  When I launch an "arachni-insecure-cookies" attack
+Then the output should contain "0 issues were detected."
+
+
+Scenario: Using the arachni, look for for forms with file upload functionality and verify no issues are found
+  Given "arachni" is installed
+  And the following profile:
+     | name                | value                          |
+     | url                 | https://www.<>.com        	|
+     | depth               | 1   							|
+  When I launch an "arachni-allowed-methods" attack
+Then the output should contain "0 issues were detected."
+
+
+Scenario: Using the arachni, look for for forms with file upload functionality and verify no issues are found
+  Given "arachni" is installed
+  And the following profile:
+     | name                | value                          |
+     | url                 | https://www.<>.com        	|
+     | depth               | 1   							|
+  When I launch an "arachni-mixed-resource" attack
+Then the output should contain "0 issues were detected."
