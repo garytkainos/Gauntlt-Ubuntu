@@ -33,5 +33,5 @@ Installation
 Required Docker to be installed.
 
 		git clone https://github.com/garytkainos/Gauntlt-Ubuntu 
-		Docker Build .
+		Docker build .
 		Docker run <Image ID>
