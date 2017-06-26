@@ -32,6 +32,10 @@
       "description" : "Looks for insecure cookies.",
       "requires" : [ "<url>", "<depth>"]
     },
+  "arachni-form-upload" : { "command" : "arachni --checks=form_upload --scope-directory-depth-limit=<depth> <url>",
+      "description" : "Looks for insecure cookies.",
+      "requires" : [ "<url>", "<depth>"]
+    },
   "arachni-insecure-cookies" : { "command" : "arachni --checks=insecure_cookies --scope-directory-depth-limit=<depth> <url>",
       "description" : "Looks for insecure cookies.",
       "requires" : [ "<url>", "<depth>"]
