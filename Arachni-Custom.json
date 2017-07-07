@@ -28,28 +28,28 @@
       "requires" : [ "<url>", "<depth>", "<link_count>", "<auto_redundant>" ]
     },
   
-  "arachni-mixed-resource" : { "command" : "arachni --checks=mixed_resource --scope-directory-depth-limit=<depth> <url>",
+  "arachni-mixed-resource" : { "command" : "arachni --checks=mixed_resource --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
       "description" : "Looks for insecure cookies.",
       "requires" : [ "<url>", "<depth>"]
     },
-  "arachni-form-upload" : { "command" : "arachni --checks=form_upload --scope-directory-depth-limit=<depth> <url>",
+  "arachni-form-upload" : { "command" : "arachni --checks=form_upload --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
       "description" : "Looks for insecure cookies.",
       "requires" : [ "<url>", "<depth>"]
     },
-  "arachni-insecure-cookies" : { "command" : "arachni --checks=insecure_cookies --scope-directory-depth-limit=<depth> <url>",
+  "arachni-insecure-cookies" : { "command" : "arachni --checks=insecure_cookies --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
       "description" : "Looks for insecure cookies.",
       "requires" : [ "<url>", "<depth>"]
     },
-  "arachni-allowed-methods" : { "command" : "arachni --checks=allowed_methods --scope-directory-depth-limit=<depth> <url>",
+  "arachni-allowed-methods" : { "command" : "arachni --checks=allowed_methods --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
       "description" : "Looks for unallowed http methods.",
       "requires" : [ "<url>", "<depth>"]
     },
-  "arachni-session-fixation" : { "command" : "arachni --checks=session_fixation --scope-directory-depth-limit=<depth> <url>",
-      "description" : "Looks for unallowed http methods.",
+  "arachni-session-fixation" : { "command" : "arachni --checks=session_fixation --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
+      "description" : "Looks for session hijack vulnerability.",
       "requires" : [ "<url>", "<depth>"]
     },
-  "arachni-xss-script-context" : { "command" : "arachni --checks=xss_script_context --scope-directory-depth-limit=<depth> <url>",
-      "description" : "Looks for unallowed http methods.",
+  "arachni-xss-script-context" : { "command" : "arachni --checks=xss_script_context --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
+      "description" : "Looks for XSS vulnerabilities.",
       "requires" : [ "<url>", "<depth>"]
     }
 }

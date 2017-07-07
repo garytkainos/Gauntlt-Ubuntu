@@ -1,0 +1,31 @@
+@reallyslow
+Feature: Look for forms with file upload functionality 
+
+Background:
+
+  Given "arachni" is installed
+  And the following profile:
+     | name                | value                          |
+     | url                 | https://www.kainos.com        	|
+     | depth               | 1   							              |
+     | timeout             | 00:09:00 	     				        |
+
+Scenario: Using the arachni, look for for forms with file upload functionality and verify no issues are found
+  When I launch an "arachni-form-upload" attack
+Then the output should contain "0 issues were detected."
+
+Scenario: Using the arachni, Looks for resources served over HTTP when the HTML code is server over HTTPS.
+  When I launch an "arachni-mixed-resource" attack
+Then the output should contain "0 issues were detected."
+
+Scenario: Using the arachni, Logs cookies that are served over an encrypted channel but without having the secure flag set.
+  When I launch an "arachni-insecure-cookies" attack
+Then the output should contain "0 issues were detected."
+
+Scenario: Using the arachni, look for unallowed HTTP methods
+  When I launch an "arachni-allowed-methods" attack
+Then the output should contain "0 issues were detected."
+
+Scenario: Using the arachni, Checks whether or not the session cookie can be set to an arbitrary value
+  When I launch an "arachni-session-fixation" attack
+Then the output should contain "0 issues were detected."

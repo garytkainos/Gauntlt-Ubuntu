@@ -1,5 +1,7 @@
 Gauntlt Docker, based on: Ubuntu15:10
 
+Blog post - https://www.kainos.com/closer-look-gauntlt/ 
+
 Raw data of Docker container to allow easy customisation for each unique environment. Solution in Docker container to make it easier to integrated into the CI/CD pipeline
 
 Configured for the following tools:
@@ -21,12 +23,6 @@ Custom Arachni attacks have been added these include the following:
 Requires Attack Files - You can either add them pre-build or post (or both) depending on requirments.
 
 See example attack files - https://github.com/gauntlt/gauntlt/tree/master/examples
-
-Roadmap
-
-- Arachni attack expansion 
-- Custom attacks
-
 
 Installation 
 
