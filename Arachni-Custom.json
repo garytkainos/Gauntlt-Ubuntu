@@ -15,7 +15,7 @@
       "description" : "This is a scan for cross site scripting (xss) that only runs the base xss module in arachni.  The scan only crawls as many levels deep as you specify.  The higher the integer, the longer the scan will take to run.",
       "requires" : [ "<url>", "<depth>"]
     },
-  "arachni-full_xss" : { "command" : "arachni --checks=xss* --scope-directory-depth-limit=1 --scope-page-limit=10 --scope-auto-redundant=2 <url>",
+  "arachni-full_xss" : { "command" : "arachni --checks=xss* --scope-directory-depth-limit=1 --scope-page-limit=10 --scope-auto-redundant=2 --timeout <timeout> <url>",
       "description" : "This is a scan for cross site scripting (xss) that only runs all the xss modules in arachni.  The scan only crawls one level deep, which makes it faster.  For more depth, run the gauntlt attack alias 'arachni-full_xss_with_depth' and specifiy depth.",
       "requires" : [ "<url>" ]
     },
@@ -50,6 +50,14 @@
     },
   "arachni-xss-script-context" : { "command" : "arachni --checks=xss_script_context --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
       "description" : "Looks for XSS vulnerabilities.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+    "arachni-sql-full" : { "command" : "arachni --checks=sql* --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
+      "description" : "Looks for SQL vulnerabilities.",
+      "requires" : [ "<url>", "<depth>"]
+    },
+      "arachni-os_injection" : { "command" : "arachni --checks=OS* --scope-directory-depth-limit=<depth> --timeout <timeout> <url>",
+      "description" : "Looks for OS injection vulnerabilities.",
       "requires" : [ "<url>", "<depth>"]
     }
 }
